@@ -50,63 +50,15 @@
                         </div>
                     </div>
                     <div class="box-contatti">
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                        <div class="box-friend-profile d-flex align-items-center px-2"
+                            v-for="(singoloContatto, i) in contatti">
+                            <img class="img-size" src="{{singoloContatto.avatar}}" alt="">
                             <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
+                                <h5>{{singoloContatto.name}}</h5>
+                                <h6></h6>
                             </div>
                         </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-profile d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo messaggio inviato</h6>
-                            </div>
-                        </div>
-                        
+
                     </div>
                 </div>
                 <div class="col-8 d-flex flex-column">
