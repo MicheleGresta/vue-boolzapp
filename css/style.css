@@ -1,7 +1,6 @@
-
 :root {
-    --main-page-color : rgb(151, 151, 151);
-    --secondary-page-color : rgb(233, 233, 233);
+    --main-page-color: rgb(151, 151, 151);
+    --secondary-page-color: rgb(233, 233, 233);
 }
 
 
@@ -11,75 +10,182 @@
     box-sizing: border-box;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
+i {
+    color: var(--main-page-color);
+}
+
+h6 {
+    color: var(--secondary-page-color);
+}
 
 /* classi riusabili */
 
-.img-size{
+.img-size {
     border-radius: 50%;
     height: 70%;
     aspect-ratio: 1/1;
 }
 
-.icon-group-settings{
+.icon-group-settings {
     font-size: 1.5rem;
     display: flex;
     gap: 1rem;
     align-items: center;
 }
-/* header settings */
-.height-header{
+
+/* generale */
+
+.height-header {
     height: 70px;
 }
 
-.header-menu a{
+.header-menu a {
     color: var(--main-page-color)
 }
 
-.header-menu-bg{
+/* col 1 */
+
+/* header */
+.box-my-info,
+.box-friend-info {
     background-color: var(--secondary-page-color);
 }
 
-.header-line-middle{
-    border-right: 2px solid var(--main-page-color);
-}
-/* custom del mio profilo top-left */
-
-.box-my-info{
-    padding-right: 1rem;
+.header-line-middle {
+    border-right: 1px solid var(--main-page-color);
 }
 
-/* custom del profilo top-right */
-
-.header-menu h6{
-    color: var(--main-page-color);
+/* notifica */
+.box-notifications a {
+    font-style: none;
+    color: var(--secondary-page-color);
 }
 
-.box-friend-settings{
-    padding-right: 1rem;
-}
-
-/* INIZIO SECONDA ROW */
-
-/* custom left-col */
-.box-notifications a{
-    color: var(--main-page-color);
-}
-
-.box-icon{
+.box-icon {
     background-color: rgba(255, 255, 255, 0.747);
     border-radius: 50%;
     height: 90%;
 }
-.box-icon i{
+
+.box-icon i {
     color: rgb(142, 218, 252);
     padding: .7rem;
-    font-size: .7rem;
+    font-size: 1.5rem;
 }
-.notifications-banner{
+
+.notifications-banner {
     background-color: rgb(142, 218, 252);
 }
 
-.row > .col-4{
+.row>.col-4 {
     padding-left: 0;
     padding-right: 0;
+}
+
+/* search bar */
+
+.box-input-search-bar {
+    padding: .3rem;
+    background-color: var(--secondary-page-color);
+}
+
+.box-search-icon a {
+    color: var(--main-page-color);
+}
+
+.box-search-icon i {
+    font-size: .9rem;
+}
+
+.box-search-icon {
+    padding: 0 1.5rem;
+    border: 1px solid var(--main-page-color);
+    background-color: white;
+}
+
+.box-input-bar {
+    width: 100%;
+}
+
+.box-input-bar input {
+    width: 100%;
+    border: 1px solid var(--main-page-color);
+}
+
+/* lista contatti */
+.box-contatti {
+    height: 100%;
+    border-bottom: 1px solid var(--secondary-page-color);
+    padding-top: .4rem;
+    overflow: auto;
+}
+
+.box-contatti .img-size {
+    width: 60px;
+    margin: .3rem;
+}
+
+.box-contatti h6 {
+    color: var(--main-page-color);
+}
+
+.box-friend-name-info {
+    margin-left: .5rem;
+}
+
+.box-friend-profile:hover,
+.box-friend-profile-long:hover {
+    background-color: var(--secondary-page-color);
+    cursor: pointer;
+}
+
+/* col 2 */
+
+/* header */
+.box-friend-profile-long {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.box-friend-name-info h6 {
+    color: var(--main-page-color);
+}
+
+/* lista messaggi */
+
+.box-messaggio {
+    background-color: var(--secondary-page-color);
+}
+
+.row>.col-8 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.input-sett {
+    border: 0;
+    border-radius: 5px;
+}
+
+.box-messaggio i {
+    font-size: 1.3rem;
+    color: var(--main-page-color);
+}
+
+.box-text-area {
+    background-image: url("../img/mine.jpg");
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.altezza-pagina{
+    height: 80vh;
+}
+
+.max-altezza{
+    height: 100%;
 }

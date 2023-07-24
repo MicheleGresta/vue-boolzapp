@@ -17,9 +17,9 @@
 <body>
     <div id="app">
         <div class="container-lg my-5">
-            <div class="row header-menu header-menu-bg">
-                <div class="col-4">
-                    <div class="box-my-info d-flex justify-content-between height-header header-line-middle">
+            <div class="row altezza-pagina overflow-hidden">
+                <div class="col-4 max-altezza">
+                    <div class="box-my-info d-flex justify-content-between height-header header-line-middle px-3">
                         <div class="box-my-profile d-flex align-items-center">
                             <img class="img-size" src="./img/avatar_io.jpg" alt="">
                             <h5>Sofia</h5>
@@ -30,37 +30,118 @@
                             <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="col-8">
-                    <div class="box-friend-info d-flex justify-content-between height-header">
-                        <div class="box-friend-profile d-flex align-items-center">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
-                            <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo accesso oggi alle 12:00</h6>
-                            </div>
-                        </div>
-                        <div class="box-friend-settings icon-group-settings">
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                            <a href="#"><i class="fa-solid fa-paperclip"></i></a>
-                            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
                     <div class="notifications-banner d-flex p-3 gap-3 align-items-center">
                         <div class="box-icon">
                             <i class="fa-solid fa-bell-slash"></i>
                         </div>
                         <div class="box-notifications">
                             <h5>Ricevi notifiche di nuovi messaggi</h5>
-                            <a href="#"><h6>Attiva notifiche desktop</h6></a>
+                            <a href="#">
+                                <h6>Attiva notifiche desktop</h6>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="box-input-search-bar d-flex align-items-center">
+                        <div class="box-search-icon">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div class="box-input-bar">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="px-1">
+                        </div>
+                    </div>
+                    <div class="box-contatti">
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-profile d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo messaggio inviato</h6>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-8 d-flex flex-column">
+                    <div class="box-friend-info d-flex justify-content-between height-header">
+                        <div class="box-friend-profile-long d-flex align-items-center px-2">
+                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <div class="box-friend-name-info">
+                                <h5>Michele</h5>
+                                <h6>Ultimo accesso oggi alle 12:00</h6>
+                            </div>
+                        </div>
+                        <div class="box-friend-settings icon-group-settings px-3">
+                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <a href="#"><i class="fa-solid fa-paperclip"></i></a>
+                            <a href="#"><i class="fa-solid fa-ellipsis-vertical"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="box-text-area">
+
+                    </div>
+
+                    <div class="box-messaggio d-flex align-items-center p-2">
+                        <div class="box px-4">
+                            <a href="#"><i class="fa-regular fa-face-smile"></i></a>
+                        </div>
+                        <div class="box px-1 d-flex flex-grow-1">
+                            <input type="text" placeholder="Scrivi un messaggio"
+                                class="d-flex flex-grow-1 p-2 input-sett">
+                        </div>
+                        <div class="box px-4">
+                            <a href="#"><i class="fa-solid fa-microphone"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-8"></div>
             </div>
         </div>
     </div>
