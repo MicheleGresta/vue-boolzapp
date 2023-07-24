@@ -1,0 +1,85 @@
+
+:root {
+    --main-page-color : rgb(151, 151, 151);
+    --secondary-page-color : rgb(233, 233, 233);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* classi riusabili */
+
+.img-size{
+    border-radius: 50%;
+    height: 70%;
+    aspect-ratio: 1/1;
+}
+
+.icon-group-settings{
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+/* header settings */
+.height-header{
+    height: 70px;
+}
+
+.header-menu a{
+    color: var(--main-page-color)
+}
+
+.header-menu-bg{
+    background-color: var(--secondary-page-color);
+}
+
+.header-line-middle{
+    border-right: 2px solid var(--main-page-color);
+}
+/* custom del mio profilo top-left */
+
+.box-my-info{
+    padding-right: 1rem;
+}
+
+/* custom del profilo top-right */
+
+.header-menu h6{
+    color: var(--main-page-color);
+}
+
+.box-friend-settings{
+    padding-right: 1rem;
+}
+
+/* INIZIO SECONDA ROW */
+
+/* custom left-col */
+.box-notifications a{
+    color: var(--main-page-color);
+}
+
+.box-icon{
+    background-color: rgba(255, 255, 255, 0.747);
+    border-radius: 50%;
+    height: 90%;
+}
+.box-icon i{
+    color: rgb(142, 218, 252);
+    padding: .7rem;
+    font-size: .7rem;
+}
+.notifications-banner{
+    background-color: rgb(142, 218, 252);
+}
+
+.row > .col-4{
+    padding-left: 0;
+    padding-right: 0;
+}
