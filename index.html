@@ -18,7 +18,7 @@
     <div id="app">
         <div class="container-lg my-5">
             <div class="row altezza-pagina overflow-hidden">
-                <div class="col-4 max-altezza">
+                <div class="col-4 max-altezza d-flex flex-column">
                     <div class="box-my-info d-flex justify-content-between height-header header-line-middle px-3">
                         <div class="box-my-profile d-flex align-items-center">
                             <img class="img-size" src="./img/avatar_io.jpg" alt="">
@@ -49,10 +49,11 @@
                             <input type="text" placeholder="Cerca o inizia una nuova chat" class="px-1">
                         </div>
                     </div>
-                    <div class="box-contatti">
+                    <div class="box-contatti ">
                         <div class="box-friend-profile d-flex align-items-center px-2"
-                            v-for="(singoloContatto, i) in contatti">
-                            <img class="img-size" src="{{singoloContatto.avatar}}" alt="">
+                            v-for="(singoloContatto, i) in contatti"
+                            @click="onUserClick(singoloContatto)">
+                            <img class="img-size" :src="getAvatarImg(singoloContatto)" alt="">
                             <div class="box-friend-name-info">
                                 <h5>{{singoloContatto.name}}</h5>
                                 <h6></h6>
@@ -67,7 +68,7 @@
                             <img class="img-size" src="./img/avatar_1.jpg" alt="">
                             <div class="box-friend-name-info">
                                 <h5>Michele</h5>
-                                <h6>Ultimo accesso oggi alle 12:00</h6>
+                                <h6>Ultimo accesso</h6>
                             </div>
                         </div>
                         <div class="box-friend-settings icon-group-settings px-3">
@@ -77,8 +78,15 @@
                         </div>
                     </div>
 
-                    <div class="box-text-area">
-
+                    <div class="box-text-area d-flex flex-column gap-1">
+                        <div class="single-message d-flex">
+                            <div class="message-baloon sent">
+                        {{contattoCliccato.messages.message}}
+                        </div>
+                        </div>
+                        <div class="single-message d-flex">
+                            <div class="message-baloon received"></div>
+                        </div>
                     </div>
 
                     <div class="box-messaggio d-flex align-items-center p-2">

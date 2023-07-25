@@ -1,6 +1,7 @@
 :root {
     --main-page-color: rgb(151, 151, 151);
     --secondary-page-color: rgb(233, 233, 233);
+    --bg-color-main: rgb(217, 219, 212);
 }
 
 
@@ -8,6 +9,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 0%, rgba(0,150,136,1) 25%, rgba(210,219,219,1) 25%);;
+    height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.col-4,
+.col-8{
+    background-color: white;
 }
 
 .overflow-hidden {
@@ -68,7 +82,8 @@ h6 {
 .box-icon {
     background-color: rgba(255, 255, 255, 0.747);
     border-radius: 50%;
-    height: 90%;
+    height: 50px;
+    aspect-ratio: 1/1;
 }
 
 .box-icon i {
@@ -122,6 +137,9 @@ h6 {
     border-bottom: 1px solid var(--secondary-page-color);
     padding-top: .4rem;
     overflow: auto;
+    flex-basis: 0;
+    flex-grow: 1;
+
 }
 
 .box-contatti .img-size {
@@ -180,6 +198,7 @@ h6 {
     background-image: url("../img/mine.jpg");
     flex-basis: 0;
     flex-grow: 1;
+    overflow: auto;
 }
 
 .altezza-pagina{
@@ -188,4 +207,22 @@ h6 {
 
 .max-altezza{
     height: 100%;
+}
+
+.message-baloon{
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    display: inline-block;
+    min-width: 200px;
+    margin-top: .5rem;
+}
+
+.single-message{
+    margin:  0 1rem;
+}
+
+.sent{
+    margin-left: auto;
+    background-color: rgb(213, 249, 186);
 }

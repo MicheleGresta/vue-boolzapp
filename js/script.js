@@ -7,7 +7,7 @@ const app = Vue.createApp({
       contatti: [
         {
           name: "Michele",
-          avatar: "/img/avatar_1.jpg",
+          avatar: "avatar_1",
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -28,7 +28,7 @@ const app = Vue.createApp({
         },
         {
           name: "Fabio",
-          avatar: "/img/avatar_2.jpg",
+          avatar: "avatar_2",
           messages: [
             {
               date: "20/03/2020 16:30:00",
@@ -49,7 +49,7 @@ const app = Vue.createApp({
         },
         {
           name: "Samuele",
-          avatar: "/img/avatar_3.jpg",
+          avatar: "avatar_3",
           messages: [
             {
               date: "28/03/2020 10:10:40",
@@ -70,7 +70,7 @@ const app = Vue.createApp({
         },
         {
           name: "Luisa",
-          avatar: "/img/avatar_4.jpg",
+          avatar: "avatar_4",
           messages: [
             {
               date: "10/01/2020 15:30:55",
@@ -84,11 +84,24 @@ const app = Vue.createApp({
             },
           ],
         },
-      ]
+      ],
 
+      contattoCliccato : null,
 
 
 
     }
+  },
+
+  methods: {
+    getAvatarImg(singoloContatto) {
+      return `./img/${singoloContatto.avatar}.jpg`
+    },
+  onUserClick(singoloContatto){
+    this.contattoCliccato = singoloContatto
   }
+},
+mounted(){
+  this.contattoCliccato = this.contatti[0]
+}
 }).mount("#app")
