@@ -51,12 +51,11 @@
                     </div>
                     <div class="box-contatti ">
                         <div class="box-friend-profile d-flex align-items-center px-2"
-                            v-for="(singoloContatto, i) in contatti"
-                            @click="onUserClick(singoloContatto)">
+                            v-for="(singoloContatto, i) in contatti" @click="onUserClick(singoloContatto)">
                             <img class="img-size" :src="getAvatarImg(singoloContatto)" alt="">
                             <div class="box-friend-name-info">
                                 <h5>{{singoloContatto.name}}</h5>
-                                <h6></h6>
+                                <h6>Ultimo messaggio inviato alle</h6>
                             </div>
                         </div>
 
@@ -65,10 +64,10 @@
                 <div class="col-8 d-flex flex-column">
                     <div class="box-friend-info d-flex justify-content-between height-header">
                         <div class="box-friend-profile-long d-flex align-items-center px-2">
-                            <img class="img-size" src="./img/avatar_1.jpg" alt="">
+                            <img class="img-size" :src="getAvatarOnClick(contattoCliccato)" alt="">
                             <div class="box-friend-name-info">
-                                <h5>Michele</h5>
-                                <h6>Ultimo accesso</h6>
+                                <h5>{{contattoCliccato.name}}</h5>
+                                <h6>{{}}</h6>
                             </div>
                         </div>
                         <div class="box-friend-settings icon-group-settings px-3">
@@ -79,13 +78,19 @@
                     </div>
 
                     <div class="box-text-area d-flex flex-column gap-1">
-                        <div class="single-message d-flex">
-                            <div class="message-baloon sent">
-                        {{contattoCliccato.messages.message}}
+                        <div class="single-message d-flex"
+                        v-for="singoloMessaggio in contattoCliccato.messages">
+                            <div class="message-baloon sent"
+                            v-if="singoloMessaggio.status === 'sent'">
+                            {{singoloMessaggio.message}}
+                            </div>
                         </div>
-                        </div>
-                        <div class="single-message d-flex">
-                            <div class="message-baloon received"></div>
+                        <div class="single-message d-flex"
+                        v-for="(singoloMessaggio) in contattoCliccato.messages">
+                            <div class="message-baloon received"
+                            v-if="singoloMessaggio.status === 'received'">
+                            {{singoloMessaggio.message}}
+                            </div>
                         </div>
                     </div>
 
@@ -95,7 +100,9 @@
                         </div>
                         <div class="box px-1 d-flex flex-grow-1">
                             <input type="text" placeholder="Scrivi un messaggio"
-                                class="d-flex flex-grow-1 p-2 input-sett">
+                                class="d-flex flex-grow-1 p-2 input-sett"
+                                v-model="myMessage"
+                                @keyup.enter="onEnterClick(myMessage)">
                         </div>
                         <div class="box px-4">
                             <a href="#"><i class="fa-solid fa-microphone"></i></a>

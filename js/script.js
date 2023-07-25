@@ -2,8 +2,8 @@
 const app = Vue.createApp({
 
 
-  data(){
-    return{
+  data() {
+    return {
       contatti: [
         {
           name: "Michele",
@@ -86,9 +86,9 @@ const app = Vue.createApp({
         },
       ],
 
-      contattoCliccato : null,
+      contattoCliccato: null,
 
-
+      
 
     }
   },
@@ -97,11 +97,29 @@ const app = Vue.createApp({
     getAvatarImg(singoloContatto) {
       return `./img/${singoloContatto.avatar}.jpg`
     },
-  onUserClick(singoloContatto){
-    this.contattoCliccato = singoloContatto
+    getAvatarOnClick(contattoCliccato) {
+      return `./img/${contattoCliccato.avatar}.jpg`
+    },
+    onUserClick(singoloContatto) {
+      this.contattoCliccato = singoloContatto
+      console.log(this.getLastObjectIndex());
+    },
+    onEnterClick(myMessage){
+
+      this.contattoCliccato.messages.push({
+        date: new Date(),
+        message: this.myMessage,
+        status: "sent",
+
+      })
+      this.myMessage = "";
+    },
+    getLastObjectIndex(contattoCliccato){
+      const indiceOggetto = this.contattoCliccato.length -1;
+      return indiceOggetto
+    },
+  },
+  beforeMount() {
+    this.contattoCliccato = this.contatti[0]
   }
-},
-mounted(){
-  this.contattoCliccato = this.contatti[0]
-}
 }).mount("#app")
