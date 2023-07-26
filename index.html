@@ -46,7 +46,12 @@
                             <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                         </div>
                         <div class="box-input-bar">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat" class="px-1">
+                            <input type="text" 
+                            placeholder="Cerca o inizia una nuova chat" 
+                            class="px-1" 
+                            v-model="filtro"
+                            @keyup.enter="filterList()"
+                            >
                         </div>
                     </div>
                     <div class="box-contatti ">
