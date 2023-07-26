@@ -80,15 +80,7 @@
                     <div class="box-text-area d-flex flex-column gap-1">
                         <div class="single-message d-flex"
                         v-for="singoloMessaggio in contattoCliccato.messages">
-                            <div class="message-baloon sent"
-                            v-if="singoloMessaggio.status === 'sent'">
-                            {{singoloMessaggio.message}}
-                            </div>
-                        </div>
-                        <div class="single-message d-flex"
-                        v-for="(singoloMessaggio) in contattoCliccato.messages">
-                            <div class="message-baloon received"
-                            v-if="singoloMessaggio.status === 'received'">
+                            <div class="message-baloon" :class="singoloMessaggio.status">
                             {{singoloMessaggio.message}}
                             </div>
                         </div>
