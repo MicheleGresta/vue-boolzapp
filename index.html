@@ -77,12 +77,14 @@
                         </div>
                     </div>
 
-                    <div class="box-text-area d-flex flex-column gap-1">
+                    <div class="box-text-area d-flex flex-column gap-1" ref="focusMessage">
                         <div class="single-message d-flex"
                         v-for="singoloMessaggio in contattoCliccato.messages">
                             <div class="message-baloon" :class="singoloMessaggio.status">
                             {{singoloMessaggio.message}}
+                            <span class="msg-time">{{singoloMessaggio.date}}</span>
                             </div>
+                            
                         </div>
                     </div>
 

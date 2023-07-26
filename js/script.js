@@ -88,7 +88,7 @@ const app = Vue.createApp({
 
       contattoCliccato: null,
 
-      
+      myMessage: "",
 
     }
   },
@@ -102,22 +102,46 @@ const app = Vue.createApp({
     },
     onUserClick(singoloContatto) {
       this.contattoCliccato = singoloContatto
-      console.log(this.getLastObjectIndex());
+
     },
-    onEnterClick(myMessage){
+    onEnterClick(myMessage) {
+      if (myMessage == "") return;
 
       this.contattoCliccato.messages.push({
-        date: new Date(),
+        date: "",
         message: this.myMessage,
         status: "sent",
-
       })
+      setTimeout(() => {
+        this.$refs.focusMessage.scrollTop =
+          this.$refs.focusMessage.scrollHeight
+      }, 0),
+
+        this.getIndexOf(this.contattoCliccato)
       this.myMessage = "";
+      setTimeout(() => {
+        this.rispostaMessaggio(this.contattoCliccato)
+      }, 1000)
+    
     },
-    getLastObjectIndex(contattoCliccato){
-      const indiceOggetto = this.contattoCliccato.length -1;
+    getLastObjectIndex(numeroMessaggi) {
+      const indiceOggetto = this.contattoCliccato.length - 1;
       return indiceOggetto
     },
+    getIndexOf(messaggiTotali) {
+      const lastIndexArray = messaggiTotali.messages.length - 1;
+      console.log(lastIndexArray);
+      return lastIndexArray
+    },
+    rispostaMessaggio(contattoEl) {
+      if (contattoEl.messages[this.getIndexOf(this.contattoCliccato)].status === "sent") {
+        this.contattoCliccato.messages.push({
+          date: "",
+          message: "Ok",
+          status: "received"
+        });
+      };
+    },    
   },
   beforeMount() {
     this.contattoCliccato = this.contatti[0]
