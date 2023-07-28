@@ -91,7 +91,7 @@ const app = Vue.createApp({
       myMessage: "",
 
       filtro: "",
-        
+        orarioUpdate: "",
     }
   },
 
@@ -110,7 +110,10 @@ const app = Vue.createApp({
       if (myMessage == "") return;
 
       this.contattoCliccato.messages.push({
-        date: "",
+        date: new Intl.DateTimeFormat("it", {
+          dateStyle: "short",
+          timeStyle: "medium",
+        }).format(new Date()),
         message: this.myMessage,
         status: "sent",
       })
@@ -138,14 +141,16 @@ const app = Vue.createApp({
     rispostaMessaggio(contattoEl) {
       if (contattoEl.messages[this.getIndexOf(this.contattoCliccato)].status === "sent") {
         this.contattoCliccato.messages.push({
-          date: "",
+          date: new Intl.DateTimeFormat("it", {
+            dateStyle: "short",
+            timeStyle: "medium",
+          }).format(new Date()),
           message: "Ok",
           status: "received"
         });
       };
     }, 
     filterList(){
-// problemi a capire sto filtro 
       const listaFiltrata = []
 
       this.contatti.forEach(singContatto => {
