@@ -90,7 +90,7 @@ const app = Vue.createApp({
 
       myMessage: "",
 
-        filtro: "",
+      filtro: "",
         
     }
   },
@@ -146,12 +146,17 @@ const app = Vue.createApp({
     }, 
     filterList(){
 // problemi a capire sto filtro 
-      if (this.contatti.name.toLowerCase().includes(this.filtro.toLowerCase())) {
-        console.log("cè");
-      } else {
-        console.log("non cè");
-      }
+      const listaFiltrata = []
+
+      this.contatti.forEach(singContatto => {
+        if (singContatto.name.includes(this.filtro)){
+          listaFiltrata.push(singContatto)
+        }
+
+      });
+      return listaFiltrata;
     }
+    
   },
   beforeMount() {
     this.contattoCliccato = this.contatti[0]

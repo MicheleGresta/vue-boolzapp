@@ -50,13 +50,12 @@
                             placeholder="Cerca o inizia una nuova chat" 
                             class="px-1" 
                             v-model="filtro"
-                            @keyup.enter="filterList()"
                             >
                         </div>
                     </div>
                     <div class="box-contatti ">
                         <div class="box-friend-profile d-flex align-items-center px-2"
-                            v-for="(singoloContatto, i) in contatti" @click="onUserClick(singoloContatto)">
+                            v-for="(singoloContatto, i) in filterList()" @click="onUserClick(singoloContatto)">
                             <img class="img-size" :src="getAvatarImg(singoloContatto)" alt="">
                             <div class="box-friend-name-info">
                                 <h5>{{singoloContatto.name}}</h5>
